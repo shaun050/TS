@@ -4113,18 +4113,20 @@ body {
   perspective: 1000px;
   border-radius: 16px;
   overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 black;
 }
 .card:nth-child(4n+1) {
-  background: #ffff;
+  background: #000;
 }
 .card:nth-child(4n+2) {
-  background: #ffff;
+  background: #000;
 }
 .card:nth-child(4n+3) {
-  background: #ffff;
+  background: #000;
 }
 .card:nth-child(4n+4) {
-  background: #ffff;
+  background: #000;
 }
 .card-txt {
   max-width: 50%;
@@ -5664,6 +5666,21 @@ body {
   transform: rotateY(180deg);
   padding: 24px;
   box-sizing: border-box;
+  
+}
+.flip-card-back p strong {
+  font-size: 1.5rem;              /* Increase size */
+  font-weight: 800;               /* Bold */
+  color: #fff;                    /* White text */
+  letter-spacing: 1px;            /* Spaced out */
+  text-transform: uppercase;      /* Capitalized */
+  background: linear-gradient(90deg, #ffff, #5dffff); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+
 }
 
 
@@ -5699,7 +5716,8 @@ cards.forEach((card, index) => {
 }
 .card-list {
   list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 20px; 
   margin: 0;
 }
 
@@ -5707,13 +5725,13 @@ cards.forEach((card, index) => {
   position: relative;
   padding: 10px 0;
   margin-bottom: 8px;
-  font-size: 24px;
+  font-size: 21px;
   color: #fff;
   font-weight: 500;
   font-palette: #fff;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1;
+  transform: translateY(0px);
   animation: listFadeIn 0.6s ease forwards;
 }
 
